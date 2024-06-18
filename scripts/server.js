@@ -81,7 +81,7 @@ app.get('/api/data', (req, res) => {
     }
     console.log('Connected to database as id ' + connection.threadId);
   });
-  const user = 'Трофимов Сергей Александрович';//todo
+  const user = 'Трофимов Сергей Александрович';
   connection.query('SELECT account_number, surname, name, patronymic, birth_date, inn, status FROM customers WHERE customers.user_full_name = \'' + user + '\'', (err, results, fields) => {
     if (err) {
       console.error('Error querying database: ' + err.stack);
